@@ -3,7 +3,6 @@
 }
 
 body {
-  box-sizing: border-box;
   margin-left: 20%;
   margin-right: 20%;
   background-color: rgb(32, 191, 235);
@@ -20,10 +19,24 @@ h1 {
 
 .header-text {
   margin-right: 10%;
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
 }
 
-.header-text {
-  margin-bottom: 2rem;
+.header-text a {
+  text-decoration: none;
+  color: rgb(89, 0, 255);
+  font-size: 1.4rem;
+  transition-duration: 0.5s;
+}
+
+.header-text a:hover,
+.header-text a:focus {
+  background-color: rgb(254, 120, 247);
+  padding: 0.3rem;
+  border-radius: 5px;
 }
 
 .container {
@@ -32,6 +45,7 @@ h1 {
   width: 400px;
   height: auto;
   border-radius: 10px 10px 0 0;
+  box-shadow: 0 0 40px rgb(89, 0, 255);
 }
 
 .natur {
@@ -53,17 +67,16 @@ h1 {
   transform: translate(-100%, 100%) rotate(360deg);
 }
 
-/*
-.star:hover {
-  transform: translate(0, 0 ) rotate(360deg);
-}*/
-
 h2 {
   padding: 1rem;
+  padding-top: 2rem;
+  font-size: 2rem;
 }
 
 .container > p {
   padding: 1rem;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 @media screen and (max-width: 640px) {
