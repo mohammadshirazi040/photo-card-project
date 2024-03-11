@@ -1,38 +1,37 @@
-html {
-  box-sizing: border-box;
+* {
+  margin: 0;
 }
 
 body {
+  box-sizing: border-box;
   margin-left: 20%;
   margin-right: 20%;
-  background-color: aliceblue;
+  background-color: rgb(32, 191, 235);
 }
 
 h1 {
-  border-left: 5px solid blue;
-  color: blue;
-  text-align: right;
+  border-left: 1rem solid rgb(89, 0, 255);
+  margin-bottom: 2rem;
+  text-align: end;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: rgb(89, 0, 255);
 }
 
-h2 {
-  padding: 0.9rem;
-}
-
-p {
+.header-text {
   margin-right: 10%;
 }
 
-.star {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+.header-text {
+  margin-bottom: 2rem;
 }
 
 .container {
   position: relative;
+  background-color: white;
   width: 400px;
   height: auto;
-  background-color: white;
+  border-radius: 10px 10px 0 0;
 }
 
 .natur {
@@ -41,11 +40,38 @@ p {
   border-radius: 10px 10px 0 0;
 }
 
-.star:hover {
-  transform: rotate(365deg);
-  transition-duration: 5s;
+.star {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transform-origin: 0 0;
+  transition: transform 1s ease-in-out;
 }
 
-.unterschrift {
-  padding: 0.9rem;
+.container:hover .star,
+.star:hover {
+  transform: translate(-100%, 100%) rotate(360deg);
+}
+
+/*
+.star:hover {
+  transform: translate(0, 0 ) rotate(360deg);
+}*/
+
+h2 {
+  padding: 1rem;
+}
+
+.container > p {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .header-text {
+    margin-right: 15%;
+  }
 }
