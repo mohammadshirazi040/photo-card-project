@@ -1,5 +1,7 @@
 * {
   margin: 0;
+  --page-background-color-night: black;
+  --page-text-color-night: white;
 }
 
 body {
@@ -46,12 +48,27 @@ h1 {
   height: auto;
   border-radius: 10px 10px 0 0;
   box-shadow: 0 0 40px rgb(89, 0, 255);
+  transition: 0.3s;
+  margin-bottom: 3rem;
+}
+
+.container:hover {
+  box-shadow: 0 0 40px 3px rgb(89, 0, 255);
 }
 
 .natur {
   width: 400px;
   height: 250px;
   border-radius: 10px 10px 0 0;
+  transition: transform 0.3s;
+}
+
+.natur-rahmen {
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+.natur:hover {
+  transform: scale(1.2);
 }
 
 .star {
@@ -60,11 +77,13 @@ h1 {
   right: 20px;
   transform-origin: 0 0;
   transition: transform 1s ease-in-out;
+  opacity: 0.3;
 }
 
 .container:hover .star,
 .star:hover {
   transform: translate(-100%, 100%) rotate(360deg);
+  opacity: 1;
 }
 
 h2 {
@@ -76,7 +95,6 @@ h2 {
 .container > p {
   padding: 1rem;
   padding-bottom: 2rem;
-  margin-bottom: 3rem;
 }
 
 @media screen and (max-width: 640px) {
@@ -86,5 +104,15 @@ h2 {
   }
   .header-text {
     margin-right: 15%;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--page-background-color-night);
+    color: var(--page-text-color-night);
+  }
+  .container {
+    background-color: var(--page-background-color-night);
   }
 }
