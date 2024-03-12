@@ -7,12 +7,14 @@
 }
 
 body {
-  margin-left: 20%;
-  margin-right: 20%;
   background-color: rgb(32, 191, 235);
 }
 
 /* ==== Header ==== */
+.header {
+  margin-left: 20%;
+  margin-right: 20%;
+}
 
 h1 {
   border-left: 1rem solid rgb(89, 0, 255);
@@ -46,7 +48,10 @@ h1 {
 }
 
 /* ==== Container ===== */
-
+main {
+  margin-left: 20%;
+  margin-right: 20%;
+}
 .container {
   position: relative;
   background-color: white;
@@ -132,4 +137,53 @@ h2 {
   .header-text a:focus {
     background-color: rgb(89, 0, 255);
   }
+}
+
+/* =========  footer ========= */
+
+#footer {
+  margin-top: 7rem;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 15rem;
+}
+
+.sos {
+  border-left: 0.5rem solid rgb(89, 0, 255);
+  margin-left: 3rem;
+  position: relative;
+}
+
+.fa-user {
+  position: absolute;
+  left: -2.5rem;
+  top: 0.6rem;
+  color: white;
+}
+
+.fa-paw {
+  position: absolute;
+  left: -2.5rem;
+  top: 0.6rem;
+  color: white;
+}
+
+.fa-envelope {
+  position: absolute;
+  left: -2.5rem;
+  top: 0.6rem;
+  color: white;
+}
+
+.sos h2 {
+  padding-top: 0;
+  color: rgb(89, 0, 255);
+}
+
+.sos p {
+  margin-right: 5rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  color: white;
 }
