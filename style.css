@@ -1,3 +1,5 @@
+/* General */
+
 * {
   margin: 0;
   --page-background-color-night: black;
@@ -9,6 +11,8 @@ body {
   margin-right: 20%;
   background-color: rgb(32, 191, 235);
 }
+
+/* ==== Header ==== */
 
 h1 {
   border-left: 1rem solid rgb(89, 0, 255);
@@ -41,6 +45,8 @@ h1 {
   border-radius: 5px;
 }
 
+/* ==== Container ===== */
+
 .container {
   position: relative;
   background-color: white;
@@ -56,6 +62,11 @@ h1 {
   box-shadow: 0 0 40px 3px rgb(89, 0, 255);
 }
 
+.images {
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
 .natur {
   width: 400px;
   height: 250px;
@@ -63,10 +74,6 @@ h1 {
   transition: transform 0.3s;
 }
 
-.natur-rahmen {
-  overflow: hidden;
-  border-radius: 10px 10px 0 0;
-}
 .natur:hover {
   transform: scale(1.2);
 }
@@ -97,6 +104,8 @@ h2 {
   padding-bottom: 2rem;
 }
 
+/* ==== Media Queries ==== */
+
 @media screen and (max-width: 640px) {
   body {
     margin-left: 5%;
@@ -114,5 +123,13 @@ h2 {
   }
   .container {
     background-color: var(--page-background-color-night);
+  }
+
+  .header-text a {
+    color: rgb(255, 16, 243);
+  }
+  .header-text a:hover,
+  .header-text a:focus {
+    background-color: rgb(89, 0, 255);
   }
 }
