@@ -8,3 +8,5 @@
 - Transitions
 - Add Subtle Transitions
 - Dark Mode
+- Add Footer
+- Add List View
