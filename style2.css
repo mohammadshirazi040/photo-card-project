@@ -3,7 +3,7 @@ main {
   margin-right: 20%;
 }
 
-.container {
+.list-view {
   position: relative;
   background-color: white;
   width: 100%;
@@ -12,56 +12,39 @@ main {
   box-shadow: 0 0 40px rgb(89, 0, 255);
   transition: 0.3s;
   margin-bottom: 3rem;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
-.container:hover {
+.list-view:hover {
   box-shadow: 0 0 40px 3px rgb(89, 0, 255);
 }
 
-.images {
+.list-view .images {
   overflow: hidden;
   border-radius: 10px 0 0px 10px;
 }
 
-.natur {
+.list-view .natur {
   width: 70px;
   height: 70px;
   border-radius: 10px 0 0 10px;
   transition: transform 0.3s;
 }
 
-.natur:hover {
-  transform: scale(1.2);
-}
-
-.star {
+.list-view h2 {
   position: absolute;
-  top: 10px;
-  left: 90px;
-  transform-origin: 0 0;
-  transition: transform 1s ease-in-out;
-  opacity: 0.3;
+  top: -16px;
+  left: 140px;
+  font-size: 2rem;
 }
 
-.container:hover .star,
-.star:hover {
-  transform: translate(-100%, 100%) rotate(360deg);
-  opacity: 1;
-}
-
-.container h2 {
+.list-view p {
   position: absolute;
-  top: -15px;
-  left: 150px;
-}
-
-.container p {
-  position: absolute;
-  top: 12px;
+  top: 28px;
   left: 280px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .fa-plane {
@@ -69,22 +52,4 @@ main {
   top: 14px;
   left: 90px;
   font-size: 2.5rem;
-}
-
-@media screen and (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--page-background-color-night);
-    color: var(--page-text-color-night);
-  }
-  .container {
-    background-color: var(--page-background-color-night);
-  }
-
-  .header-text a {
-    color: rgb(255, 16, 243);
-  }
-  .header-text a:hover,
-  .header-text a:focus {
-    background-color: rgb(89, 0, 255);
-  }
 }
